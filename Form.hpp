@@ -84,3 +84,6 @@ class FormUbahRute : public Form{
 class FormTambahRute : public Form{
 
 };
+class FormMasukanPenumpang : public Form{
+
+};

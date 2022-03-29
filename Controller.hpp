@@ -149,6 +149,7 @@ class DisplayDaftarRuteController : public Controller {
         DisplayDaftarRute display;
     public:
         string initiateForm(RuteManager ruteManager){
+            //menampilkan pilihan rute, mengembalikan id pilihan rute yg dipilih
         }
 };
 
@@ -163,8 +164,9 @@ class DisplayPesananController : public Controller {
 
 class PemesananTiketController : public Controller {
     private:
-        FormPemesananTiket form;
+        FormMasukanPenumpang form;
     public:
-        string initiateForm(PesananManager pesananManager, RuteManager ruteManager, ArmadaManager armadaManager){
+        string initiateForm(string username, string pilihanrute, RuteManager ruteManager, TiketManager tiketManager,PenumpangManager penumpangManager){
         }
+        
 };

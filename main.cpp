@@ -31,6 +31,8 @@ int main(){
 
     DisplayPesananController displayPesananController = DisplayPesananController();
 
+    PemesananTiketController pemesananTiketController = PemesananTiketController();
+
     string action;
     //menampilkan homescreen dengan pilihan login atau signup
     // action = loginSignupController.initiateDisplay();
@@ -79,7 +81,7 @@ int main(){
             else if(action == "displaypesanan"){
                 //display pesanan
                 //butuh argumen pengguna, biar tau displaypesanan yg ditampilin itu punya user atau admin
-                displayPesananController.initiateForm(role);
+                displayPesananController.initiateForm(role, username, tiketManager, penumpangManager);
             }
             else{
                 cout << "action tidak valid" << endl;
@@ -95,7 +97,7 @@ int main(){
                 //display daftar rute
                 pilihanrute = displayDaftarRuteController.initiateForm(ruteManager);
                 //habis itu, masuk ke form masukan penumpang
-                pemesananTiketController.initiateForm(role, pilihanrute, ruteManager, tiketManager, penumpangManager);
+                pemesananTiketController.initiateForm(username, pilihanrute, ruteManager, tiketManager, penumpangManager);
             }
             else{
                 cout << "action tidak valid" << endl;
