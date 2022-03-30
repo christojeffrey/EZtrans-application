@@ -10,7 +10,7 @@ class SignUpController : public Controller {
     private:
         FormSignUp form;
     public:
-        string initiateForm(PenggunaManager penggunaManager){ // mengembalikan "user"
+        string initiate(PenggunaManager penggunaManager){ // mengembalikan "user"
             while(true){
                 string action = form.show();
                 // controller can catch whatever it's that the form return
@@ -52,7 +52,7 @@ class SignInController : public Controller {
     private:
         FormSignIn form;
     public:
-        string initiateForm(PenggunaManager penggunaManager){ // mengembalikan "user" atau "admin"
+        string initiate(PenggunaManager penggunaManager){ // mengembalikan "user" atau "admin"
             while(true){
                 string action = form.show();
                 // controller can catch whatever it's that the form return
@@ -105,7 +105,7 @@ class HomeController : public Controller {
         DisplayAdminHome displayAdmin;
         DisplayUserHome displayUser;
     public:
-        string initiateForm(string role,string pengguna){
+        string initiate(string role,string pengguna){
             this->displayAdmin = DisplayAdminHome();
             this->displayUser = DisplayUserHome();
             
@@ -117,7 +117,7 @@ class TambahRuteController : public Controller {
     private:
         FormTambahRute form;
     public:
-        string initiateForm(RuteManager ruteManager){
+        string initiate(RuteManager ruteManager){
         }
 };
 
@@ -125,7 +125,7 @@ class UbahRuteController : public Controller {
     private:
         FormUbahRute form;
     public:
-        string initiateForm(RuteManager ruteManager){
+        string initiate(RuteManager ruteManager){
         }
 };
 
@@ -133,40 +133,76 @@ class TambahArmadaController : public Controller {
     private:
         FormTambahArmada form;
     public:
-        string initiateForm(ArmadaManager armadaManager){
+        string initiate(ArmadaManager armadaManager){
+            while(true){
+                string action = form.show();
+                if(action == "submit"){
+                    if(armadaManager.isArmadaExist(form.getNama())){
+                        form.setError("Armada sudah terdaftar");
+                    }
+                    else{
+                        armadaManager.addArmada(new Armada("1", form.getNama(), form.getKapasitas()));
+                    }
+                }
+                else if(action == "exit"){
+                    return "exit";
+                }
+            }
+
         }
 };
 class UbahArmadaController : public Controller {
     private:
         FormUbahArmada form;
     public:
-        string initiateForm(ArmadaManager armadaManager){
+        string initiate(ArmadaManager armadaManager){
         }
 };
 
 class DisplayDaftarRuteController : public Controller {
     private:
+        DisplayDetailRute displayDetailRute;
         DisplayDaftarRute display;
     public:
-        string initiateForm(RuteManager ruteManager){
+        string initiate(RuteManager ruteManager){
             //menampilkan pilihan rute, mengembalikan id pilihan rute yg dipilih
         }
 };
 
-class DisplayPesananController : public Controller {
+class DisplayRiwayatController : public Controller {
     private:
-        DisplayPesanan display;
+        DisplayDetailRiwayat displayDetail;
+        DisplayRiwayat display;
     public:
-        string initiateForm(string role, string username, TiketManager tiketManager,PenumpangManager penumpangManager){
+        string initiate(string role, string username, TiketManager tiketManager,PenumpangManager penumpangManager){
         }
     
 };
 
 class PemesananTiketController : public Controller {
     private:
+        DisplayDetailPesanan displayDetail;
         FormMasukanPenumpang form;
     public:
-        string initiateForm(string username, string pilihanrute, RuteManager ruteManager, TiketManager tiketManager,PenumpangManager penumpangManager){
+        string initiate(string username, string pilihanrute, RuteManager ruteManager, TiketManager tiketManager,PenumpangManager penumpangManager){
         }
         
+};
+
+class DisplayPembayaranController : public Controller {
+    private:
+        DisplayPembayaran display;
+    public:
+        string initiate(string idTiket, string username, TiketManager tiketManager,PenumpangManager penumpangManager){
+        }
+};
+
+class SignInSignUpController : public Controller {
+    private:
+        DisplaySignInSignUp display;
+    public:
+        string initiate(){
+            string action = display.show();
+            return action;
+        }
 };

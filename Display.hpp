@@ -1,7 +1,7 @@
 #include<string>
 #include<iostream>
 using namespace std;
-class DisplayLoginSignup{
+class DisplaySignInSignUp{
     public:
         string show(){
             cout << "DisplayLoginSignup" << endl;
@@ -54,10 +54,44 @@ class DisplayDaftarRute{
         }
 };
 
-class DisplayPesanan{
+class DisplayRiwayat{
     public:
         string show(){
             cout << "displayPesanan" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            return "";
+        }
+};
+class DisplayDetailRiwayat{
+    public:
+        string show(){
+            cout << "displayDetailPesanan" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            return "";
+        }
+};
+class DisplayDetailPesanan{
+    public:
+        string show(){
+            cout << "displayDetail" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            return "";
+        }
+};
+
+class DisplayPembayaran{
+    public:
+        string show(){
+            cout << "displayPembayaran" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            return "";
+        }
+};
+
+class DisplayDetailRute{
+    public:
+        string show(){
+            cout << "displayDetailRute" << endl;
             // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
             return "";
         }

@@ -76,7 +76,37 @@ class FormUbahArmada : public Form{
 
 };
 class FormTambahArmada : public Form{
+    private:
+        string nama;
+        string kapasitas;
+        string Error;
+    public:
+        string show(){
+            cout << "FormTambahArmada" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            if(Error != ""){
+                void showError();
+            }
+            cout << "misalnya ini aksi submit" << endl;
+            return onSubmit();
 
+        }
+        string onSubmit(){
+            cout << "onSubmit" << endl;
+            return "submit";
+        }
+        string getNama(){
+            return nama;
+        }
+        string getKapasitas(){
+            return kapasitas;
+        }
+        string getError(){
+            return Error;
+        }
+        void setError(string error){
+            Error = error;
+        }
 };
 class FormUbahRute : public Form{
 

@@ -81,7 +81,9 @@ class ArmadaManager{
                 jumlahArmada++;
             }
         }
-        
+        int getJumlahArmada(){
+            return this->jumlahArmada;
+        }
         bool isArmadaExist(string IdArmada){
             for(int i = 0; i < jumlahArmada; i++){
                 if(armada[i].getIdArmada() == IdArmada){
