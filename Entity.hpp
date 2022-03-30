@@ -25,6 +25,7 @@ class Pengguna{
 class Tiket{
     private:
         string idTiket; // PK
+        string username;
         string idRute;
         string status; // menunggu pembayaran, sudah di bayar, cancel
         string tanggalPemesanan;
@@ -47,6 +48,7 @@ class Tiket{
         string getTanggalPemesanan(){
             return this->tanggalPemesanan;
         }
+        //tambahi setter
 
 };
 class Penumpang{
@@ -54,13 +56,13 @@ class Penumpang{
         string noKTP; // PK
         string nama;
         string noTelp;
-        string idPesanan; // FK
+        string idTiket; // FK
     public:
-        Penumpang(string noKTP, string nama, string noTelp, string idPesanan){
+        Penumpang(string noKTP, string nama, string noTelp, string idTiket){
             this->noKTP = noKTP;
             this->nama = nama;
             this->noTelp = noTelp;
-            this->idPesanan = idPesanan;
+            this->idTiket = idTiket;
         }
         string getNoKTP(){
             return this->noKTP;
@@ -71,8 +73,8 @@ class Penumpang{
         string getNoTelp(){
             return this->noTelp;
         }
-        string getIdPesanan(){
-            return this->idPesanan;
+        string getIdTIket(){
+            return this->idTiket;
         }
 };
 class Armada{

@@ -35,11 +35,12 @@ class DisplayUserHome{
         string show(){
             cout << "displayUserHome" << endl;
             // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
-            cout << "misalnya dia tambah tiket" << endl;
-            return tambahTiketButtonOnClick();
+            //misalnya dia melihat rute
+            cout << "misalnya dia melihat rute" << endl;
+            return lihatRuteButtonOnClick();
         }
-        string tambahTiketButtonOnClick(){
-            return "tambahtiket";
+        string lihatRuteButtonOnClick(){
+            return "lihatrute";
         }
 };
 
