@@ -67,6 +67,7 @@ class RuteManager{
         //getter berdasarkan id rute, sesuai kebutuhan
        
 };
+
 class ArmadaManager{
     private:
         Armada* armada;
@@ -96,6 +97,7 @@ class ArmadaManager{
         //getter berdasarkan kode armada, sesuai kebutuhan
        
 };
+
 class TiketManager{
     private:
         Tiket* tiket;
@@ -123,6 +125,7 @@ class TiketManager{
         //getter berdasarkan id tiket, sesuai kebutuhan
        
 };
+
 class PenumpangManager{
     private:
         Penumpang* penumpang;

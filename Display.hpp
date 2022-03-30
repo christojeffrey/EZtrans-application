@@ -17,7 +17,6 @@ class DisplaySignInSignUp{
         }
 };
 
-
 class DisplayAdminHome{
     public:
         string show(){
@@ -31,7 +30,6 @@ class DisplayAdminHome{
             return "tambahrute";
         }
 };
-
 class DisplayUserHome{
     public:
         string show(){
@@ -42,15 +40,6 @@ class DisplayUserHome{
         }
         string tambahTiketButtonOnClick(){
             return "tambahtiket";
-        }
-};
-
-class DisplayDaftarRute{
-    public:
-        string show(){
-            cout << "displayDaftarRute" << endl;
-            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
-            return "";
         }
 };
 
@@ -70,6 +59,24 @@ class DisplayDetailRiwayat{
             return "";
         }
 };
+
+class DisplayDaftarRute{
+    public:
+        string show(){
+            cout << "displayDaftarRute" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            return "";
+        }
+};
+class DisplayDetailRute{
+    public:
+        string show(){
+            cout << "displayDetailRute" << endl;
+            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
+            return "";
+        }
+};
+
 class DisplayDetailPesanan{
     public:
         string show(){
@@ -88,11 +95,3 @@ class DisplayPembayaran{
         }
 };
 
-class DisplayDetailRute{
-    public:
-        string show(){
-            cout << "displayDetailRute" << endl;
-            // didalem method show, dia bisa manggil method this lainnya, yang masing-masing bisa return ke controller
-            return "";
-        }
-};

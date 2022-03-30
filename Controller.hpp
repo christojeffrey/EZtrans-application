@@ -6,6 +6,16 @@
 class Controller {
 
 };
+class SignInSignUpController : public Controller {
+    private:
+        DisplaySignInSignUp display;
+    public:
+        string initiate(){
+            string action = display.show();
+            return action;
+        }
+};
+
 class SignUpController : public Controller {
     private:
         FormSignUp form;
@@ -120,7 +130,6 @@ class TambahRuteController : public Controller {
         string initiate(RuteManager ruteManager){
         }
 };
-
 class UbahRuteController : public Controller {
     private:
         FormUbahRute form;
@@ -128,7 +137,6 @@ class UbahRuteController : public Controller {
         string initiate(RuteManager ruteManager){
         }
 };
-
 class TambahArmadaController : public Controller {
     private:
         FormTambahArmada form;
@@ -159,26 +167,26 @@ class UbahArmadaController : public Controller {
         }
 };
 
-class DisplayDaftarRuteController : public Controller {
-    private:
-        DisplayDetailRute displayDetailRute;
-        DisplayDaftarRute display;
-    public:
-        string initiate(RuteManager ruteManager){
-            //menampilkan pilihan rute, mengembalikan id pilihan rute yg dipilih
-        }
-};
-
 class DisplayRiwayatController : public Controller {
     private:
         DisplayDetailRiwayat displayDetail;
         DisplayRiwayat display;
     public:
         string initiate(string role, string username, TiketManager tiketManager,PenumpangManager penumpangManager){
+            //menampilkan display. jika action yang diminta adalah "exit", maka return "exit". jika action yg diberikan berupa salah satu idTiket, maka ditampilkan detail dari idTiket tersebut
         }
     
 };
 
+class DisplayDaftarRuteController : public Controller {
+    private:
+        DisplayDetailRute displayDetail;
+        DisplayDaftarRute display;
+    public:
+        string initiate(RuteManager ruteManager){
+            //menampilkan pilihan rute. jika action yang diminta adalah "exit", maka return "exit". jika action yg diberikan berupa salah satu idRute, maka ditampilkan detail dari idRute tersebut
+        }
+};
 class PemesananTiketController : public Controller {
     private:
         DisplayDetailPesanan displayDetail;
@@ -188,21 +196,10 @@ class PemesananTiketController : public Controller {
         }
         
 };
-
 class DisplayPembayaranController : public Controller {
     private:
         DisplayPembayaran display;
     public:
         string initiate(string idTiket, string username, TiketManager tiketManager,PenumpangManager penumpangManager){
-        }
-};
-
-class SignInSignUpController : public Controller {
-    private:
-        DisplaySignInSignUp display;
-    public:
-        string initiate(){
-            string action = display.show();
-            return action;
         }
 };
