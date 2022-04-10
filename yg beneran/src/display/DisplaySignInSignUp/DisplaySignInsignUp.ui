@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="SignInButton">
+  <widget class="QPushButton" name="signUpButton">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -26,7 +26,7 @@
     <string>Sign Up</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="SignUpButton">
+  <widget class="QPushButton" name="signInButton">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -34,6 +34,9 @@
      <width>75</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Sign In</string>
