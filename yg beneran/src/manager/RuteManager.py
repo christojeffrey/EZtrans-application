@@ -12,6 +12,9 @@ class RuteManager:
     def __str__(self):
         return "RuteManager:\n" + str(self.rute) + "jumlahRute: " + str(self.jumlahRute) + "\nmaxRute: " + str(self.maxRute) + "\n"
     
+    def getRute(self, index):
+        return self.rute[index]
+
     def addRute(self, idRute, idArmada, idAsal, idTujuan, tanggalKeberangkatan, jamBerangkat, jamTiba, harga, kapasitas):
         newRute = Rute(idRute, idArmada, idAsal, idTujuan, tanggalKeberangkatan, jamBerangkat, jamTiba, harga, kapasitas)
         if self.jumlahRute < self.maxRute:
@@ -25,6 +28,12 @@ class RuteManager:
             if rute.getIdRute() == idRute:
                 return True
         return False
+
+    def searchIdxRute(self, idRute):
+        for i in range(len(self.rute)):
+            if self.rute[i].getIdRute() == idRute:
+                return i
+        return -1
 
     def isCapacityEnough(self, requestCount, idRute):
         for rute in self.rute:

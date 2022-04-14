@@ -1,10 +1,12 @@
+import sys
+
 from PyQt6 import uic
 from PyQt6.QtWidgets import QApplication
 
 # directorynya harus digituin, soalnya yg manggil itu main :(
 Form, Window = uic.loadUiType("form/FormMasukanPenumpang/FormMasukanPenumpang.ui")
 
-class MasukanPenumpang:
+class MasukanPenumpang():
     def __init__(self):
         self.namaPenumpang = ""
         self.app = QApplication([])
@@ -26,5 +28,4 @@ class MasukanPenumpang:
     def pesanButtonClicked(self):
         self.window.close()
         print("Data Tiket Ditambahkan")
-    
 

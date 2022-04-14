@@ -30,22 +30,25 @@ signInSignUpController = SignInSignUpController()
 action = signInSignUpController.initiate()
 
 # STAGE SIGN UP
-# if(action == "signup"):
-#     print("signup")
-#     signUpController = SignUpController()
-#     currentRole, currentUsername = signUpController.initiate(penggunaManager)
+if(action == "signup"):
+    print("signup")
+    signUpController = SignUpController()
+    currentRole, currentUsername = signUpController.initiate(penggunaManager)
 
-# # STAGE SIGN IN
-# elif(action == "signin"):
-#     print("signin")
-#     signInController = SignInController()
-#     currentRole, currentUsername = signInController.initiate(penggunaManager)
+# STAGE SIGN IN
+elif(action == "signin"):
+    print("signin")
+    signInController = SignInController()
+    currentRole, currentUsername = signInController.initiate(penggunaManager)
 
-# # STAGE SIGN IN
-# elif(action == "pesantiket"):
-#     print("pesan tiket")
-PemesananTiketController = PemesananTiketController(1)
-PemesananTiketController.initiate(ruteManager)
+# STAGE SIGN IN
+elif(action == "pesantiket"):
+    print("pesan tiket")
+    PemesananTiketController = PemesananTiketController(1)
+    PemesananTiketController.initiate(ruteManager)
+
+# STAGE TAMBAH RUTE
+# lokasiAwal, lokasiAkhir, harga, durasi, jamKeberangkatan, kapasitasTotal, idBus = FormTambahRute().show()
 
 # STAGE HOME
 # print("currentRole: " + currentRole)

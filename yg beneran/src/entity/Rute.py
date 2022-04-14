@@ -1,24 +1,24 @@
 
 class Rute:
-    def __init__(self, idRute, idArmada, idAsal, idTujuan, tanggalKeberangkatan, jamBerangkat, jamTiba, harga, kapasitas):
+    def __init__(self, idRute, idArmada, idAsal, idTujuan, tanggalKeberangkatan, jamBerangkat, durasi, harga, kapasitas):
         self.idRute = idRute
         self.idArmada = idArmada
-        self.idAsal = idAsal
-        self.idTujuan = idTujuan
+        self.lokasiAwal = idAsal
+        self.lokasiAkhir = idTujuan
         self.tanggalKeberangkatan = tanggalKeberangkatan
         self.jamBerangkat = jamBerangkat
-        self.jamTiba = jamTiba
+        self.durasi = durasi
         self.harga = harga
         self.kapasitas = kapasitas
 
     def __str__(self):
         return "Rute:\nidRute: " + str(self.idRute) \
                     + "idArmada: " + str(self.idArmada) \
-                    + "idAsal: " + str(self.idAsal) \
-                    + "idTujuan: " + str(self.idTujuan) \
+                    + "lokasiAwal: " + str(self.lokasiAwal) \
+                    + "lokasiAkhir: " + str(self.lokasiAkhir) \
                     + "tanggalKeberangkatan: " + str(self.tanggalKeberangkatan) \
                     + "jamBerangkat: " + str(self.jamBerangkat) \
-                    + "jamTiba: " + str(self.jamTiba) \
+                    + "durasi: " + str(self.durasi) \
                     + "harga: " + str(self.harga) \
                     + "\n"
 
@@ -28,11 +28,11 @@ class Rute:
     def getIdArmada(self):
         return self.idArmada
     
-    def getIdAsal(self):
-        return self.idAsal
+    def getLokasiAwal(self):
+        return self.lokasiAwal
     
-    def getIdTujuan(self):
-        return self.idTujuan
+    def getLokasiAkhir(self):
+        return self.lokasiAkhir
     
     def getTanggalKeberangkatan(self):
         return self.tanggalKeberangkatan
@@ -49,4 +49,17 @@ class Rute:
     def getKapasitas(self):
         return self.kapasitas
 
-# if __name__ == "__main__":
+    def setIdRute(self, idRute):
+        self.idRute = idRute
+
+    def setIdArmada(self, idArmada):
+        self.idArmada = idArmada
+    
+    def setlokasiAwal(self, idAsal):
+        self.lokasiAwal = idAsal
+
+    def setlokasiAkhir(self, idTujuan):
+        self.lokasiAkhir = idTujuan
+
+    def setTanggalKeberangkatan(self, tanggalKeberangkatan):
+        self.tanggalKeberangkatan = tanggalKeberangkatan

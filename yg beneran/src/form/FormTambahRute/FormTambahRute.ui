@@ -16,14 +16,14 @@
   <widget class="QPushButton" name="addRuteBt">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>260</y>
-     <width>56</width>
-     <height>17</height>
+     <x>100</x>
+     <y>250</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Tambah Rute</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -51,7 +51,7 @@
     <rect>
      <x>30</x>
      <y>50</y>
-     <width>51</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -59,7 +59,7 @@
     <string>Lokasi Awal</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lokasiAwal">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -74,7 +74,7 @@
     <rect>
      <x>30</x>
      <y>100</y>
-     <width>51</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -82,7 +82,7 @@
     <string>Harga</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="harga">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -97,15 +97,15 @@
     <rect>
      <x>30</x>
      <y>150</y>
-     <width>81</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Jam Keberangkatan</string>
+    <string>Waktu Keberangkatan</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="jamKeberangkatan">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -120,7 +120,7 @@
     <rect>
      <x>30</x>
      <y>200</y>
-     <width>51</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -128,7 +128,7 @@
     <string>ID Bus</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="idBus">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -143,7 +143,7 @@
     <rect>
      <x>180</x>
      <y>50</y>
-     <width>51</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -151,7 +151,7 @@
     <string>Lokasi Akhir</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lokasiAkhir">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -166,7 +166,7 @@
     <rect>
      <x>180</x>
      <y>100</y>
-     <width>51</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -174,7 +174,7 @@
     <string>Durasi</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="durasi">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -189,7 +189,7 @@
     <rect>
      <x>180</x>
      <y>150</y>
-     <width>71</width>
+     <width>101</width>
      <height>16</height>
     </rect>
    </property>
@@ -197,7 +197,7 @@
     <string>Kapasitas Total</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
+  <widget class="QLineEdit" name="kapasitasTotal">
    <property name="geometry">
     <rect>
      <x>170</x>
