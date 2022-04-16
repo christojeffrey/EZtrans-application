@@ -1,12 +1,11 @@
 
 class Rute:
-    def __init__(self, idRute, idArmada, idAsal, idTujuan, tanggalKeberangkatan, jamBerangkat, durasi, harga, kapasitas):
+    def __init__(self, idRute, idArmada, idAsal, idTujuan, waktuKeberangkatan, durasi, harga, kapasitas):
         self.idRute = idRute
         self.idArmada = idArmada
         self.lokasiAwal = idAsal
         self.lokasiAkhir = idTujuan
-        self.tanggalKeberangkatan = tanggalKeberangkatan
-        self.jamBerangkat = jamBerangkat
+        self.waktuKeberangkatan = waktuKeberangkatan
         self.durasi = durasi
         self.harga = harga
         self.kapasitas = kapasitas
@@ -16,10 +15,10 @@ class Rute:
                     + "idArmada: " + str(self.idArmada) \
                     + "lokasiAwal: " + str(self.lokasiAwal) \
                     + "lokasiAkhir: " + str(self.lokasiAkhir) \
-                    + "tanggalKeberangkatan: " + str(self.tanggalKeberangkatan) \
-                    + "jamBerangkat: " + str(self.jamBerangkat) \
+                    + "waktuKeberangkatan: " + str(self.waktuKeberangkatan) \
                     + "durasi: " + str(self.durasi) \
                     + "harga: " + str(self.harga) \
+                    + "kapasitas: " + str(self.kapasitas) \
                     + "\n"
 
     def getIdRute(self):
@@ -34,14 +33,8 @@ class Rute:
     def getLokasiAkhir(self):
         return self.lokasiAkhir
     
-    def getTanggalKeberangkatan(self):
-        return self.tanggalKeberangkatan
-    
-    def getJamBerangkat(self):
-        return self.jamBerangkat
-    
-    def getJamTiba(self):
-        return self.jamTiba
+    def getWaktuKeberangkatan(self):
+        return self.waktuKeberangkatan
     
     def getHarga(self):
         return self.harga
@@ -61,5 +54,5 @@ class Rute:
     def setlokasiAkhir(self, idTujuan):
         self.lokasiAkhir = idTujuan
 
-    def setTanggalKeberangkatan(self, tanggalKeberangkatan):
-        self.tanggalKeberangkatan = tanggalKeberangkatan
+    def setWaktuKeberangkatan(self, waktuKeberangkatan):
+        self.waktuKeberangkatan = waktuKeberangkatan

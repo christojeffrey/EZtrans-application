@@ -9,7 +9,7 @@ class FormTambahRute:
         self.lokasiAkhir = ""
         self.harga = ""
         self.durasi = ""
-        self.jamKeberangkatan = ""
+        self.waktuKeberangkatan = ""
         self.kapasitasTotal = ""
         self.idBus = ""
         self.app = QApplication([])
@@ -24,17 +24,17 @@ class FormTambahRute:
         self.window.show()
         self.app.exec()
 
-        if (self.lokasiAwal == "" or self.lokasiAkhir == "" or self.harga == "" or self.durasi == "" or self.jamKeberangkatan == "" or self.kapasitasTotal == "" or self.idBus == ""):
+        if (self.lokasiAwal == "" or self.lokasiAkhir == "" or self.harga == "" or self.durasi == "" or self.waktuKeberangkatan == "" or self.kapasitasTotal == "" or self.idBus == ""):
             self.showErrorDialog()
         else:
-            return self.lokasiAwal, self.lokasiAkhir, self.harga, self.durasi, self.jamKeberangkatan, self.kapasitasTotal, self.idBus
+            return self.lokasiAwal, self.lokasiAkhir, self.harga, self.durasi, self.waktuKeberangkatan, self.kapasitasTotal, self.idBus
         
     def addRuteButtonClicked(self):
         self.lokasiAwal = self.form.lokasiAwal.text()
         self.lokasiAkhir = self.form.lokasiAkhir.text()
         self.harga = self.form.harga.text()
         self.durasi = self.form.harga.text()
-        self.jamKeberangkatan = self.form.jamKeberangkatan.text()
+        self.waktuKeberangkatan = self.form.waktuKeberangkatan.text()
         self.kapasitasTotal = self.form.kapasitasTotal.text()
         self.idBus = self.form.idBus.text()
         self.window.close()
@@ -48,5 +48,5 @@ class FormTambahRute:
         msg.exec()
         FormTambahRute().show()
 
-# lokasiAwal, lokasiAkhir, harga, durasi, jamKeberangkatan, kapasitasTotal, idBus = FormTambahRute().show()
-# print (lokasiAwal, lokasiAkhir, harga, durasi, jamKeberangkatan, kapasitasTotal, idBus)
+# lokasiAwal, lokasiAkhir, harga, durasi, waktuKeberangkatan, kapasitasTotal, idBus = FormTambahRute().show()
+# print (lokasiAwal, lokasiAkhir, harga, durasi, waktuKeberangkatan, kapasitasTotal, idBus)

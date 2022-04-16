@@ -105,7 +105,7 @@
     <string>Waktu Keberangkatan</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="jamKeberangkatan">
+  <widget class="QLineEdit" name="waktuKeberangkatan">
    <property name="geometry">
     <rect>
      <x>20</x>
